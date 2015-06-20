@@ -2,11 +2,15 @@
 [PostCSS] plugin This project tries to fix all of [flexbug's](https://github.com/philipwalton/flexbugs) issues.
 
 #bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
+
+#####Input
+
 ```css
 .foo {
     flex: 1 1 calc(1px);
 }
 ```
+#####Output
 
 ```css
 .foo {
@@ -19,7 +23,7 @@
 ## Usage
 
 ```js
-postcss([ require('postcss-flexbugs-fixes') ])
+postcss([require('postcss-flexbugs-fixes')]);
 ```
 
 See [PostCSS] docs for examples for your environment.
