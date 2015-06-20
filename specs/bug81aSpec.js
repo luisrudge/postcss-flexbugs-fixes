@@ -1,6 +1,6 @@
 var test = require('./test');
 
-describe('bug #8.1.a', function() {
+describe('bug 8.1.a', function() {
     describe('expands shorthand', function() {
         it('with px', function(done) {
             test('a{flex: 1 0 calc(1px);}', 'a{flex-grow: 1;flex-shrink: 0;flex-basis: calc(1px);}', {}, done);
