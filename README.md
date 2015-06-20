@@ -1,16 +1,16 @@
 # PostCSS Flexbugs Fixes [![Build Status][ci-img]][ci]
 [PostCSS] plugin This project tries to fix all of [flexbug's](https://github.com/philipwalton/flexbugs) issues.
 
-#bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
+# bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
 
-#####Input
+##### Input
 
 ```css
 .foo {
     flex: 1 1 calc(1px);
 }
 ```
-#####Output
+##### Output
 
 ```css
 .foo {
