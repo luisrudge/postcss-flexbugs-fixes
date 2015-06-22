@@ -3,7 +3,7 @@ var test = require('./test');
 describe('bug 6', function() {
     it('Set flex-shrink to 1 by default', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex: 1 1 0%;}';
+        var output = 'div{flex: 1 1 auto;}';
         test(input, output, {}, done);
     });
     describe('does nothing', function() {

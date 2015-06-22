@@ -1,11 +1,22 @@
 var postcss = require('postcss');
 
-function shouldSetBasis(basisValue) {
-    return !basisValue || basisValue === '0' || basisValue.replace(/\s/g, '') === '0px';
+function shouldSetAutoBasis(basisValue) {
+    return !basisValue || !basisValue.length;
+}
+
+function shouldSetZeroBasis(basisValue) {
+    return basisValue === '0' || basisValue.replace(/\s/g, '') === '0px';
 }
 
 function properBasis(basis) {
-    return shouldSetBasis(basis) ? '0%' : basis;
+    if (shouldSetAutoBasis(basis))
+    {
+        return 'auto';
+    }
+    if (shouldSetZeroBasis(basis)){
+        return '0%';
+    }
+    return basis;
 }
 
 module.exports = function(decl) {
