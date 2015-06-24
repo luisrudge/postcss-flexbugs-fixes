@@ -20,6 +20,40 @@ div {
 }
 ```
 
+## bug [4](https://github.com/philipwalton/flexbugs/blob/master/README.md#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored)
+### Input
+
+```css
+.foo {
+    flex: 1 1 0;
+}
+```
+
+### Output
+
+```css
+.foo {
+  flex: 1 1 0%;
+}
+```
+
+## bug [6](https://github.com/philipwalton/flexbugs/blob/master/README.md#6-the-default-flex-value-has-changed)
+### Input
+
+```css
+.foo {
+    flex: 1;
+}
+```
+
+### Output
+
+```css
+.foo {
+  flex: 1 1 auto;
+}
+```
+
 ## bug [7](https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box)
 ### Input
 

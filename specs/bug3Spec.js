@@ -8,8 +8,9 @@ describe('bug 3', function() {
     });
     describe('does nothing', function() {
         it('when not display: flex', function(done) {
-            var css = 'a{flex: 0;}';
-            test(css, css, {}, done);
+            var input = 'a{flex: 0;}';
+            var output = 'a{flex: 0 1 auto;}';
+            test(input, output, {}, done);
         });
         it('when no min-height is set', function(done) {
             var css = 'div{display: flex;}';

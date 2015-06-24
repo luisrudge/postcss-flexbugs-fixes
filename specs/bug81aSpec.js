@@ -35,12 +35,14 @@ describe('bug 8.1.a', function() {
     });
     describe('does nothing', function() {
         it('when using only first value', function(done) {
-            var css = 'a{flex: 0}';
-            test(css, css, {}, done);
+            var input = 'a{flex: 0}';
+            var output = 'a{flex: 0 1 auto}';
+            test(input, output, {}, done);
         });
         it('when using only first and second values', function(done) {
-            var css = 'a{flex: 0 0}';
-            test(css, css, {}, done);
+            var input = 'a{flex: 0 0}';
+            var output = 'a{flex: 0 0 auto}';
+            test(input, output, {}, done);
         });
         it('when not using calc', function(done) {
             var css = 'a{flex: 0 0 1px}';
