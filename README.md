@@ -50,7 +50,7 @@ div {
 
 ```css
 .foo {
-  flex: 1 1 auto;
+  flex: 1 1 0%;
 }
 ```
 
