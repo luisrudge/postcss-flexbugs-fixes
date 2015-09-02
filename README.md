@@ -35,26 +35,6 @@
 }
 ```
 
-## bug [7](https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box)
-### Input
-
-```css
-div {
-  box-sizing: border-box;
-  flex: 0 0 100%;
-}
-```
-
-### Output
-
-```css
-div {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  width: 100%;
-}
-```
-
 ## bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
 ### Input
 
