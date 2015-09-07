@@ -1,14 +1,14 @@
 var test = require('./test');
 
 describe('bug 4', function() {
-    it('set auto for default flex-basis property and flex-shrink in flex shorthand', function(done) {
+    it('set auto for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex: 1 1 0%;}';
+        var output = 'div{flex: 1 1 auto;}';
         test(input, output, {}, done);
     });
-    it('set flex-basis === auto when flex-basis is not set and flex-shrink is specified', function(done) {
+    it('set auto for default flex-basis when not specified', function(done) {
         var input = 'div{flex: 1 1;}';
-        var output = 'div{flex: 1 1 0%;}';
+        var output = 'div{flex: 1 1 auto;}';
         test(input, output, {}, done);
     });
     it('set flex-basis === 0% for flex-basis with plain 0', function(done) {

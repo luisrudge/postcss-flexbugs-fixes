@@ -16,10 +16,13 @@ function properBasis(basis) {
 
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
+        if(decl.value === 'none'){
+            return;
+        }
         var values = postcss.list.space(decl.value);
         var flexGrow = values[0];
         var flexShrink = values[1];
-        var flexBasis = values[2] || '0%';
+        var flexBasis = values[2] || 'auto';
         decl.value = flexGrow + ' ' + (flexShrink || '1') + ' ' + properBasis(flexBasis);
     }
 };
