@@ -6,12 +6,11 @@ describe('bug 6', function() {
         var output = 'div{flex: 1 1 auto;}';
         test(input, output, {}, done);
     });
-    it('Set flex 0 0 auto when none', function(done) {
-        var input = 'div{flex: none;}';
-        var output = 'div{flex: 0 0 auto;}';
-        test(input, output, {}, done);
-    });
     describe('does nothing', function() {
+        it('when flex is set to none', function (done) {
+            var css = 'div{flex: none;}';
+            test(css, css, {}, done);
+        });
         it('when not flex declarations', function(done) {
             var css = 'a{display: flex;}';
             test(css, css, {}, done);
