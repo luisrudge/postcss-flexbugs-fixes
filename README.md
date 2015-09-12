@@ -5,43 +5,39 @@
 ### Input
 
 ```css
-.foo {
-    flex: 1 1 0;
-}
+.foo { flex: 1; }
+.bar { flex: 1 1; }
+.foz { flex: 1 1 0; }
+.baz { flex: 1 1 0px; }
 ```
 
 ### Output
 
 ```css
-.foo {
-  flex: 1 1 0%;
-}
+.foo { flex: 1 1 0%; }
+.bar { flex: 1 1 0%; }
+.foz { flex: 1 1 0%; }
+.baz { flex: 1 1 0%; }
 ```
 
 ## bug [6](https://github.com/philipwalton/flexbugs/blob/master/README.md#6-the-default-flex-value-has-changed)
 ### Input
 
 ```css
-.foo {
-    flex: 1;
-}
+.foo { flex: 1; }
 ```
 
 ### Output
 
 ```css
-.foo {
-  flex: 1 1 0%;
-}
+.foo { flex: 1 1 0%; }
 ```
 
 ## bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
 ### Input
 
 ```css
-.foo {
-    flex: 1 1 calc(1px);
-}
+.foo { flex: 1 0 calc(1vw - 1px); }
 ```
 
 ### Output
@@ -50,7 +46,7 @@
 .foo {
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: calc(1px);
+  flex-basis: calc(1vw - 1px);
 }
 ```
 
