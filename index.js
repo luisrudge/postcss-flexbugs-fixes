@@ -7,7 +7,7 @@ module.exports = postcss.plugin('postcss-flexbugs-fixes', function(opts) {
     opts = opts || {};
 
     return function(css) {
-        css.eachDecl(function(d) {
+        css.walkDecls(function(d) {
             bug4(d);
             bug6(d);
             bug81a(d);

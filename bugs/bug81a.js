@@ -22,6 +22,6 @@ module.exports = function(decl) {
         decl.parent.insertBefore(decl, grow);
         decl.parent.insertBefore(decl, shrink);
         decl.parent.insertBefore(decl, basis);
-        decl.removeSelf();
+        decl.remove();
     }
 };

@@ -10,7 +10,7 @@
         "url":  "https://github.com/luisrudge/postcss-flexbugs-fixes.git"
     },
     "dependencies": {
-        "postcss": "^4.1.9"
+        "postcss": "^5.0.0"
     },
     "devDependencies": {
         "gulp-eslint": "^0.12.0",
