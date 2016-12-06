@@ -6,8 +6,12 @@ module.exports = function(input, output, opts, done) {
     postcss([plugin(opts)]).process(input).then(function(result) {
         expect(result.css).to.eql(output);
         expect(result.warnings()).to.be.empty;
-        done();
+        if (done) {
+            done();
+        }
     }).catch(function(error) {
-        done(error);
+        if (done) {
+            done(error);
+        }
     });
 };

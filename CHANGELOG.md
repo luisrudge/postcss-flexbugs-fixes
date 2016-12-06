@@ -1,3 +1,6 @@
+## 2.1.0
+* Prevent mutating value when flex value is one of `['none', 'auto', 'content', 'inherit', 'initial', 'unset']`
+
 ## 2.0.0
 * using postCSS 5.0
 

@@ -6,6 +6,11 @@ describe('bug 4', function() {
         var output = 'div{flex: 1 1 0%;}';
         test(input, output, {}, done);
     });
+    it('set 0% for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
+        var input = 'div{flex: 1;}';
+        var output = 'div{flex: 1 1 0%;}';
+        test(input, output, {}, done);
+    });
     it('set 0% for default flex-basis when not specified', function(done) {
         var input = 'div{flex: 1 1;}';
         var output = 'div{flex: 1 1 0%;}';
@@ -37,6 +42,15 @@ describe('bug 4', function() {
         it('doen not change auto flex-basis is set explicitly', function(done) {
             var css = 'div{flex: 1 1 auto;}';
             test(css, css, {}, done);
+        });
+        describe('when flex value is reserved word', function() {
+            var stringValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
+            stringValues.forEach(function(s) {
+                it(s, function(done) {
+                    var input = 'div{flex: ' + s + ';}';
+                    test(input, input, {}, done);
+                });
+            });
         });
     });
 });

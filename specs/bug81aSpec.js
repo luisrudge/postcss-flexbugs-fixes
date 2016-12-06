@@ -21,5 +21,14 @@ describe('bug 8.1.a', function() {
             var css = 'a{flex: 0 0 1px}';
             test(css, css, {}, done);
         });
+        describe('when flex value is reserved word', function() {
+            var stringValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
+            stringValues.forEach(function(s) {
+                it(s, function(done) {
+                    var input = 'div{flex: ' + s + ';}';
+                    test(input, input, {}, done);
+                });
+            });
+        });
     });
 });
