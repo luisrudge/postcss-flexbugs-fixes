@@ -33,6 +33,13 @@
 .foo { flex: 1 1 0%; }
 ```
 
+> This only fixes css classes that have the `flex` property set. To fix elements that are contained inside a flexbox container, use this global rule:
+```css
+* {
+    flex-shrink: 1;
+}
+```
+
 ## bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
 ### Input
 
