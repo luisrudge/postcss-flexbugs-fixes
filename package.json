@@ -12,6 +12,11 @@
     "dependencies": {
         "postcss": "^5.0.0"
     },
+    "main": "index.js",
+    "files": [
+        "bugs",
+        "index.js"
+    ],
     "devDependencies": {
         "gulp-eslint": "^0.12.0",
         "gulp-mocha":  "^2.0.1",
