@@ -10,7 +10,7 @@
         "url":  "https://github.com/luisrudge/postcss-flexbugs-fixes.git"
     },
     "dependencies": {
-        "postcss": "^5.0.0"
+        "postcss": "^6.0.1"
     },
     "main": "index.js",
     "files": [
