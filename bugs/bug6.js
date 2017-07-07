@@ -9,7 +9,7 @@ module.exports = function(decl) {
         // Safari seems to hate '0%' and the others seems to make do with a nice value when basis is missing,
         // so if we see a '0%', just remove it.  This way it'll get adjusted for any other cases where '0%' is
         // already defined somewhere else.
-        if(flexBasis == '0%') flexBasis = '';
+        if(flexBasis === '0%') flexBasis = '';
         decl.value = flexGrow + ' ' + flexShrink + ' ' + flexBasis;
     }
 };
