@@ -10,6 +10,6 @@ module.exports = function(decl) {
         // so if we see a '0%', just remove it.  This way it'll get adjusted for any other cases where '0%' is
         // already defined somewhere else.
         if(flexBasis === '0%') flexBasis = null;
-        decl.value = flexGrow + ' ' + flexShrink + ((flexBasis)?' ' + flexBasis:'');
+        decl.value = flexGrow + ' ' + flexShrink + (flexBasis ? ' ' + flexBasis : '');
     }
 };
