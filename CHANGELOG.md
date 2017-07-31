@@ -1,5 +1,5 @@
 ## 3.1.0
-* Fix safari issues with flex-basis (#38)[https://github.com/luisrudge/postcss-flexbugs-fixes/pull/38]
+* Fix safari issues with flex-basis [#38](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/38)
 
 ## 3.0.0
 * upgrade to postcss 6
