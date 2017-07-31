@@ -26,6 +26,11 @@ describe('bug 4', function() {
         var output = 'div{flex: 1 0;}';
         test(input, output, {}, done);
     });
+    it('set flex-basis when second value is not a number', function(done) {
+        var input = 'div{flex: 1 50%;}';
+        var output = 'div{flex: 1 1 50%;}';
+        test(input, output, {}, done);
+    });
     describe('does nothing', function() {
         it('when not flex declarations', function(done) {
             var css = 'a{display: flex;}';
