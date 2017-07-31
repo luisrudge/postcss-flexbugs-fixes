@@ -1,3 +1,6 @@
+## 3.2.0
+* Set flex basis if second value is not a number [#41](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/41)
+
 ## 3.1.0
 * Fix safari issues with flex-basis [#38](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/38)
 

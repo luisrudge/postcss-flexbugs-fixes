@@ -1,6 +1,6 @@
 {
     "name": "postcss-flexbugs-fixes",
-    "version": "3.1.0",
+    "version": "3.2.0",
     "description": "PostCSS plugin This project tries to fix all of flexbug's issues",
     "keywords": ["postcss", "css", "postcss-plugin", "flexbugs", "flexbox", "flex"],
     "author": "Luis Rudge <luis@luisrudge.net>",
