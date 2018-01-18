@@ -3,7 +3,7 @@ var test = require('./test');
 describe('bug 6', function() {
     it('Set flex-shrink to 1 by default', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex: 1 1;}';
+        var output = 'div{flex: 1 1 0%;}';
         test(input, output, {}, done);
     });
     describe('does nothing', function() {
@@ -17,12 +17,12 @@ describe('bug 6', function() {
         });
         it('when flex-shrink is set explicitly to zero', function(done) {
             var css = 'div{flex: 1 0 0%;}';
-            var output = 'div{flex: 1 0;}';
+            var output = 'div{flex: 1 0 0%;}';
             test(css, output, {}, done);
         });
         it('when flex-shrink is set explicitly to non-zero value', function(done) {
             var css = 'div{flex: 1 2 0%}';
-            var output = 'div{flex: 1 2}';
+            var output = 'div{flex: 1 2 0%}';
             test(css, output, {}, done);
         });
         describe('when flex value is reserved word', function() {
