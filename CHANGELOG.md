@@ -1,3 +1,6 @@
+## 3.3.0
+* Revert Autoremoval of 0% Basis [#43](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/43)
+
 ## 3.2.0
 * Set flex basis if second value is not a number [#41](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/41)
 
