@@ -1,4 +1,4 @@
 sudo: false
 language: node_js
 node_js:
-  - stable
+  - 8.11.1
