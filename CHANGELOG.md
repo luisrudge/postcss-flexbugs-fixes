@@ -1,3 +1,6 @@
+## 4.0.0
+* upgrade to postcss 7
+
 ## 3.3.1
 * Autoremoval of 0% Basis [#46](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/46). More context [here](https://github.com/luisrudge/postcss-flexbugs-fixes/issues/45#issuecomment-385070879)
 
