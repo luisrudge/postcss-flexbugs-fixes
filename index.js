@@ -6,7 +6,7 @@ var bug81a = require('./bugs/bug81a');
 var doNothingValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
 
 module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
-    opts = opts || {};
+    var options = Object.assign({ bug4: true, bug6: true, bug81a: true }, opts);
 
     return function (css) {
         css.walkDecls(function (d) {
@@ -17,9 +17,15 @@ module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
             if (doNothingValues.indexOf(d.value) > 0 && values.length === 1) {
                 return;
             }
-            bug4(d);
-            bug6(d);
-            bug81a(d);
+            if (options.bug4) {
+                bug4(d);
+            }
+            if (options.bug6) {
+                bug6(d);
+            }
+            if (options.bug81a) {
+                bug81a(d);
+            }
         });
     };
 });
