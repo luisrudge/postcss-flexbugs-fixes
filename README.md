@@ -63,6 +63,12 @@
 postcss([require('postcss-flexbugs-fixes')]);
 ```
 
+You can also disable bugs individually, possible keys `bug4`, `bug6` and `bug8a`.
+```js
+var plugin = require('postcss-flexbugs-fixes');
+postcss([plugin({ bug6: false })]);
+```
+
 See [PostCSS] docs for examples for your environment.
 
 [postcss]: https://github.com/postcss/postcss
