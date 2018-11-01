@@ -16,18 +16,18 @@ describe('bug 6', function() {
             test(css, css, {}, done);
         });
         it('when flex-shrink is set explicitly to zero', function(done) {
-            var css = 'div{flex: 1 0 0%;}';
-            var output = 'div{flex: 1 0 auto;}';
+            var css = 'div{flex: 1 0;}';
+            var output = 'div{flex: 1 0 auto}';
             test(css, output, {}, done);
         });
         it('when flex-shrink is set explicitly to non-zero value', function(done) {
             var css = 'div{flex: 1 2 0%}';
-            var output = 'div{flex: 1 2 auto}';
+            var output = 'div{flex: 1 2 0}';
             test(css, output, {}, done);
         });
         it('when flex-grow is set explicitly to zero', function(done) {
             var css = 'div{flex: 0 1 0px}';
-            var output = 'div{flex: 0 1 auto}';
+            var output = 'div{flex: 0 1 0}';
             test(css, output, {}, done);
         });
         describe('when flex value is reserved word', function() {
