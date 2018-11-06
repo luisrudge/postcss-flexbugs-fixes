@@ -1,9 +1,19 @@
 var test = require('./test');
 
 describe('bug 6', function() {
-    it('Set flex for initial value', function(done) {
+    it('Fix value when `flex:initial`', function(done) {
         var input = 'div{flex: initial;}';
         var output = 'div{flex: 0 1 auto;}';
+        test(input, output, {}, done);
+    });
+    it('Fix value when `flex:auto`', function(done) {
+        var input = 'div{flex: auto;}';
+        var output = 'div{flex: 1 1 auto;}';
+        test(input, output, {}, done);
+    });
+    it('Fix value when `flex:1`', function(done) {
+        var input = 'div{flex: 1;}';
+        var output = 'div{flex: 1 1;}';
         test(input, output, {}, done);
     });
     it('Set flex-shrink to 1 by default', function(done) {
