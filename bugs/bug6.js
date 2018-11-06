@@ -3,13 +3,13 @@ var postcss = require('postcss');
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
         if (decl.value === 'initial') {
-          decl.value = '0 1 auto';
+            decl.value = '0 1 auto';
         }
         if (decl.value === 'auto') {
-          decl.value = '1 1 auto';
+            decl.value = '1 1 auto';
         }
         if (decl.value === '1') {
-          decl.value = '1 1 0%';
+            decl.value = '1 1 0%';
         }
         var values = postcss.list.space(decl.value);
         var flexGrow = values[0];
