@@ -31,7 +31,7 @@ describe('bug 6', function() {
             test(css, output, {}, done);
         });
         describe('when flex value is reserved word', function() {
-            var stringValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
+            var stringValues = ['none', 'auto', 'content', 'inherit', 'unset'];
             stringValues.forEach(function(s) {
                 it(s, function(done) {
                     var input = 'div{flex: ' + s + ';}';
