@@ -23,7 +23,7 @@ module.exports = function(decl) {
             decl.parent.insertBefore(decl, shrink);
         }
         if (flexBasis){
-            var grow = postcss.decl({
+            var basis = postcss.decl({
                 prop: 'flex-basis',
                 value: flexBasis,
                 source: decl.source
