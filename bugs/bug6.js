@@ -2,6 +2,10 @@ var postcss = require('postcss');
 
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
+        if (decl.value === 'initial') {
+            decl.value = '0 1 auto';
+            return;
+        }
         var values = postcss.list.space(decl.value);
         var flexGrow = values[0];
         var flexShrink = values[1] || '1';
