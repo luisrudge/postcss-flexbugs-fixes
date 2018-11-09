@@ -4,12 +4,11 @@ module.exports = function(decl) {
     if (decl.prop === 'flex') {
         if (decl.value === 'initial') {
             decl.value = '0 1 auto';
+            return;
         }
         if (decl.value === 'auto') {
             decl.value = '1 1 auto';
-        }
-        if (decl.value === '1') {
-            decl.value = '1 1 0%';
+            return;
         }
         var values = postcss.list.space(decl.value);
         var flexGrow = values[0];
