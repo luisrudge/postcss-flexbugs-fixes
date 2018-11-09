@@ -3,7 +3,7 @@ var bug4 = require('./bugs/bug4');
 var bug6 = require('./bugs/bug6');
 var bug81a = require('./bugs/bug81a');
 
-var doNothingValues = ['none', 'content', 'inherit', 'unset'];
+var doNothingValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
 
 module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
     var options = Object.assign({ bug4: true, bug6: true, bug81a: true }, opts);
@@ -13,15 +13,15 @@ module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
             if (d.value === 'none') {
                 return;
             }
+            if (options.bug6) {
+                bug6(d);
+            }
             var values = postcss.list.space(d.value);
             if (doNothingValues.indexOf(d.value) > 0 && values.length === 1) {
                 return;
             }
             if (options.bug4) {
                 bug4(d);
-            }
-            if (options.bug6) {
-                bug6(d);
             }
             if (options.bug81a) {
                 bug81a(d);
