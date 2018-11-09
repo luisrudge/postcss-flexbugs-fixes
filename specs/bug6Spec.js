@@ -21,6 +21,16 @@ describe('bug 6', function() {
         var output = 'div{flex: 1 1;}';
         test(input, output, {}, done);
     });
+    it('when flex-shrink is set explicitly to zero', function(done) {
+        var css = 'div{flex: 1 0 0%;}';
+        var output = 'div{flex: 1 0;}';
+        test(css, output, {}, done);
+    });
+    it('when flex-shrink is set explicitly to non-zero value', function(done) {
+        var css = 'div{flex: 1 2 0%}';
+        var output = 'div{flex: 1 2}';
+        test(css, output, {}, done);
+    });
     describe('does nothing', function() {
         it('when flex is set to none', function (done) {
             var css = 'div{flex: none;}';
@@ -30,18 +40,8 @@ describe('bug 6', function() {
             var css = 'a{display: flex;}';
             test(css, css, {}, done);
         });
-        it('when flex-shrink is set explicitly to zero', function(done) {
-            var css = 'div{flex: 1 0 0%;}';
-            var output = 'div{flex: 1 0;}';
-            test(css, output, {}, done);
-        });
-        it('when flex-shrink is set explicitly to non-zero value', function(done) {
-            var css = 'div{flex: 1 2 0%}';
-            var output = 'div{flex: 1 2}';
-            test(css, output, {}, done);
-        });
         describe('when flex value is reserved word', function() {
-            var stringValues = ['none', 'auto', 'content', 'inherit', 'unset'];
+            var stringValues = ['none', 'content', 'inherit', 'unset'];
             stringValues.forEach(function(s) {
                 it(s, function(done) {
                     var input = 'div{flex: ' + s + ';}';
