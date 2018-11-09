@@ -1,4 +1,5 @@
 var postcss = require('postcss');
+var doNothingValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
 
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
@@ -11,6 +12,9 @@ module.exports = function(decl) {
             return;
         }
         var values = postcss.list.space(decl.value);
+        if (doNothingValues.indexOf(decl.value) > -1 && values.langth === 1) {
+            return;
+        }
         var flexGrow = values[0];
         var flexShrink = values[1] || '1';
         var flexBasis = values[2] || '0%';
