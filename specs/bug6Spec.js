@@ -32,10 +32,6 @@ describe('bug 6', function() {
         test(css, output, {}, done);
     });
     describe('does nothing', function() {
-        it('when flex is set to none', function (done) {
-            var css = 'div{flex: none;}';
-            test(css, css, {}, done);
-        });
         it('when not flex declarations', function(done) {
             var css = 'a{display: flex;}';
             test(css, css, {}, done);
