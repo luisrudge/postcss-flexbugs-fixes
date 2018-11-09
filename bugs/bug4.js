@@ -18,7 +18,7 @@ function properBasis(basis) {
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
         var values = postcss.list.space(decl.value);
-        if (doNothingValues.instanceOf(decl.value) > -1 && values.length === 1) {
+        if (doNothingValues.indexOf(decl.value) > -1 && values.length === 1) {
             return;
         }
 
