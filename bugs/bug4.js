@@ -1,4 +1,5 @@
 var postcss = require('postcss');
+var doNothingValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
 
 function shouldSetZeroBasis(basisValue) {
     if (!basisValue) {
@@ -17,6 +18,9 @@ function properBasis(basis) {
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
         var values = postcss.list.space(decl.value);
+        if (doNothingValues.instanceOf(decl.value) > -1 && values.length === 1) {
+            return;
+        }
 
         // set default values
         var flexGrow = '0';
