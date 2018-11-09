@@ -36,7 +36,7 @@
 }
 ```
 
-## bug [8.1.a](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
+## bug [8](https://github.com/philipwalton/flexbugs/blob/master/README.md#8-flex-basis-doesnt-support-calc)
 ### Input
 
 ```css
