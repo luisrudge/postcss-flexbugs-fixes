@@ -3,7 +3,7 @@ var bug4 = require('./bugs/bug4');
 var bug6 = require('./bugs/bug6');
 var bug81a = require('./bugs/bug81a');
 
-var doNothingValues = ['none', 'auto', 'content', 'inherit', 'initial', 'unset'];
+var doNothingValues = ['none', 'content', 'inherit', 'unset'];
 
 module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
     var options = Object.assign({ bug4: true, bug6: true, bug81a: true }, opts);
