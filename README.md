@@ -5,8 +5,6 @@
 ### Input
 
 ```css
-.foo { flex: 1; }
-.bar { flex: 1 1; }
 .foz { flex: 1 1 0; }
 .baz { flex: 1 1 0px; }
 ```
@@ -14,10 +12,8 @@
 ### Output
 
 ```css
-.foo { flex: 1 1; }
-.bar { flex: 1 1; }
-.foz { flex: 1 1; }
-.baz { flex: 1 1; }
+.foz { flex: 1 1 0%; }
+.baz { flex: 1 1 0%; }
 ```
 
 ## bug [6](https://github.com/philipwalton/flexbugs/blob/master/README.md#6-the-default-flex-value-has-changed)
