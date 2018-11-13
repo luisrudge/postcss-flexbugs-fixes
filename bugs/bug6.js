@@ -2,34 +2,18 @@ var postcss = require('postcss');
 
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
-        var values = postcss.list.space(decl.value);
+        var values = postcss.list.space(decl.value).reduce(function (obj, value, key) {
+            if (/%/.test(value)) {
+                obj[2] = value;
+            } else {
+                obj[key] = value;
+            }
+            return obj;
+        }, ['0', '1', '0%']);
         var flexGrow = values[0];
-        var flexShrink = values[1] || '1';
+        var flexShrink = values[1];
         var flexBasis = values[2];
-        if (flexGrow){
-            var grow = postcss.decl({
-                prop: 'flex-grow',
-                value: flexGrow,
-                source: decl.source
-            });
-            decl.parent.insertBefore(decl, grow);
-        }
-        if (flexShrink){
-            var shrink = postcss.decl({
-                prop: 'flex-shrink',
-                value: flexShrink,
-                source: decl.source
-            });
-            decl.parent.insertBefore(decl, shrink);
-        }
-        if (flexBasis){
-            var basis = postcss.decl({
-                prop: 'flex-basis',
-                value: flexBasis,
-                source: decl.source
-            });
-            decl.parent.insertBefore(decl, basis);
-        }
-        decl.remove();
+        if(flexBasis === '0px' || flexBasis === '0') flexBasis = '0%';
+        decl.value = flexGrow + ' ' + flexShrink + (flexBasis ? ' ' + flexBasis : '');
     }
 };
