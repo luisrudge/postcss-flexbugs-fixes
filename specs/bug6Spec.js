@@ -3,7 +3,17 @@ var test = require('./test');
 describe('bug 6', function() {
     it('Set flex-shrink to 1 by default', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex-grow: 1;flex-shrink: 1;}';
+        var output = 'div{flex: 1 1 0%;}';
+        test(input, output, {}, done);
+    });
+    it('Set flex-shrink to 1 by default', function(done) {
+        var input = 'div{flex: 1%;}';
+        var output = 'div{flex: 0 1 1%;}';
+        test(input, output, {}, done);
+    });
+    it('Set flex-shrink to 1 by default', function(done) {
+        var input = 'div{flex: 1 1%;}';
+        var output = 'div{flex: 1 1 1%;}';
         test(input, output, {}, done);
     });
     describe('does nothing', function() {
@@ -17,17 +27,17 @@ describe('bug 6', function() {
         });
         it('when flex-shrink is set explicitly to zero', function(done) {
             var css = 'div{flex: 1 0 0%;}';
-            var output = 'div{flex-grow: 1;flex-shrink: 0;flex-basis: 0;}';
+            var output = 'div{flex: 1 0 0%;}';
             test(css, output, {}, done);
         });
         it('when flex-shrink is set explicitly to non-zero value', function(done) {
             var css = 'div{flex: 1 2 0%;}';
-            var output = 'div{flex-grow: 1;flex-shrink: 2;flex-basis: 0;}';
+            var output = 'div{flex: 1 2 0%;}';
             test(css, output, {}, done);
         });
         it('when flex-basis is not set', function(done) {
             var css = 'div{flex: 1 1;}';
-            var output = 'div{flex-grow: 1;flex-shrink: 1;}';
+            var output = 'div{flex: 1 1 0%;}';
             test(css, output, {}, done);
         });
         describe('when flex value is reserved word', function() {
