@@ -2,7 +2,8 @@ var postcss = require('postcss');
 
 module.exports = function(decl) {
     if (decl.prop === 'flex') {
-        var values = postcss.list.space(decl.value).reduce(function (obj, value, key) {
+        var list = postcss.list.space(decl.value);
+        var values = list.reduce(function (obj, value, key) {
             if (/%/.test(value)) {
                 obj[2] = value;
             } else {
