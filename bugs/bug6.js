@@ -14,6 +14,6 @@ module.exports = function(decl) {
         var flexShrink = values[1];
         var flexBasis = values[2];
         if(flexBasis === '0px' || flexBasis === '0') flexBasis = '0%';
-        decl.value = flexGrow + ' ' + flexShrink + (flexBasis ? ' ' + flexBasis : '');
+        decl.value = flexGrow + ' ' + flexShrink + ' ' + flexBasis;
     }
 };
