@@ -11,7 +11,7 @@ module.exports = function(decl) {
                 values[key] = value;
             }
             return obj;
-        });
+        }, list);
         var flexGrow = values[0];
         var flexShrink = values[1];
         var flexBasis = values[2];
