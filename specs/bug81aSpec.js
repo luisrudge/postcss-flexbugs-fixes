@@ -9,12 +9,12 @@ describe('bug 8.1.a', function() {
     describe('does nothing', function() {
         it('when using only first value', function(done) {
             var input = 'a{flex: 0}';
-            var output = 'a{flex: 0 1}';
+            var output = 'a{flex: 0 1 0px}';
             test(input, output, {}, done);
         });
         it('when using only first and second values', function(done) {
             var input = 'a{flex: 0 0}';
-            var output = 'a{flex: 0 0}';
+            var output = 'a{flex: 0 0 0px}';
             test(input, output, {}, done);
         });
         it('when not using calc', function(done) {

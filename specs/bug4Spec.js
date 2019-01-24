@@ -1,28 +1,33 @@
 var test = require('./test');
 
 describe('bug 4', function() {
-    it('set 0% for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
+    it('set 0px for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex: 1 1;}';
+        var output = 'div{flex: 1 1 0px;}';
         test(input, output, {}, done);
     });
-    it('set 0% for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
+    it('set 0px for default flex-basis and 1 for flex-shrink in flex shorthand', function(done) {
         var input = 'div{flex: 1;}';
-        var output = 'div{flex: 1 1;}';
+        var output = 'div{flex: 1 1 0px;}';
         test(input, output, {}, done);
     });
-    it('set 0% for default flex-basis when not specified', function(done) {
+    it('set 0px for default flex-basis when not specified', function(done) {
         var input = 'div{flex: 1 1;}';
-        var output = 'div{flex: 1 1;}';
+        var output = 'div{flex: 1 1 0px;}';
         test(input, output, {}, done);
     });
-    it('set flex-basis === 0% for flex-basis with plain 0', function(done) {
+    it('set flex-basis === 0px for flex-basis with plain 0', function(done) {
         var input = 'div{flex: 1 0 0;}';
-        var output = 'div{flex: 1 0;}';
+        var output = 'div{flex: 1 0 0px;}';
         test(input, output, {}, done);
     });
-    it('set flex-basis === 0% for flex-basis with 0px', function(done) {
+    it('set flex-basis === 0xp for flex-basis with 0px', function(done) {
         var input = 'div{flex: 1 0 0px;}';
+        var output = 'div{flex: 1 0 0px;}';
+        test(input, output, {}, done);
+    });
+    it('set flex-basis === 0% for flex-basis with 0%', function(done) {
+        var input = 'div{flex: 1 0 0%;}';
         var output = 'div{flex: 1 0;}';
         test(input, output, {}, done);
     });

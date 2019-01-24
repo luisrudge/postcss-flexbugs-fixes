@@ -4,12 +4,12 @@ function shouldSetZeroBasis(basisValue) {
     if (!basisValue) {
         return false;
     }
-    return basisValue === '0' || basisValue.replace(/\s/g, '') === '0px';
+    return basisValue === '0';
 }
 
 function properBasis(basis) {
     if (shouldSetZeroBasis(basis)) {
-        return '0%';
+        return '0px';
     }
     return basis;
 }
@@ -21,7 +21,7 @@ module.exports = function(decl) {
         // set default values
         var flexGrow = '0';
         var flexShrink = '1';
-        var flexBasis = '0%';
+        var flexBasis = '0px';
 
         if (values[0]) {
             flexGrow = values[0];
