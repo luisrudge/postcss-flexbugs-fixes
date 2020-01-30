@@ -10,6 +10,9 @@ module.exports = postcss.plugin('postcss-flexbugs-fixes', function (opts) {
 
     return function (css) {
         css.walkDecls(function (d) {
+            if (d.value.indexOf('var(') > -1) {
+                return;
+            }
             if (d.value === 'none') {
                 return;
             }

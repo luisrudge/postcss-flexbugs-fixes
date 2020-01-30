@@ -29,6 +29,11 @@ describe('bug 8.1.a', function() {
                     test(input, input, {}, done);
                 });
             });
+
+            it('is a custom property', function(done) {
+                var input = 'div{flex: var(--foo);}';
+                test(input, input, {}, done);
+            });
         });
     });
 });
