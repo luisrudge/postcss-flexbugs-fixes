@@ -1,3 +1,6 @@
+## 4.2.0
+* Don't change values that reference custom props [#64](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/64)
+
 ## 4.1.0
 * Add option to disable bug fixes [#53](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/53)
 
