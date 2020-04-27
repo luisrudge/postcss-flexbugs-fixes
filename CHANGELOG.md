@@ -1,3 +1,6 @@
+## 4.2.1
+* Fix `calc` regex [#69](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/69)
+
 ## 4.2.0
 * Don't change values that reference custom props [#64](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/64)
 

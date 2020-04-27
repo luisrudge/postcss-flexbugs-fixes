@@ -1,7 +1,7 @@
 var postcss = require('postcss');
 
 module.exports = function(decl) {
-  var regex = /(\d{1,}) (\d{1,}) (calc\(.*?\))/g;
+  var regex = /(\d{1,}) (\d{1,}) (calc\(.*\))/g;
   var matches = regex.exec(decl.value);
   if (decl.prop === 'flex' && matches) {
     var grow = postcss.decl({
