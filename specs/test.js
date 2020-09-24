@@ -4,7 +4,7 @@ var plugin = require('../');
 
 module.exports = function(input, output, opts, done) {
   postcss([plugin(opts)])
-    .process(input)
+    .process(input, {from: undefined})
     .then(function(result) {
       expect(result.css).to.eql(output);
       expect(result.warnings()).to.be.empty;

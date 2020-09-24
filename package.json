@@ -15,16 +15,14 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/luisrudge/postcss-flexbugs-fixes.git"
-    },
-    "dependencies": {
-        "postcss": "^7.0.26"
-    },
+    },    
     "main": "index.js",
     "files": [
         "bugs",
         "index.js"
     ],
     "devDependencies": {
+        "postcss": "^8.1.0",
         "chai": "^4.2.0",
         "gulp": "^4.0.2",
         "gulp-eslint": "^6.0.0",
