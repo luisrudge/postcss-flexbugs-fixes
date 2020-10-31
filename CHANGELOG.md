@@ -1,3 +1,6 @@
+## 5.0.0
+* upgrade to postcss 8 [#71](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/71)
+
 ## 4.2.1
 * Fix `calc` regex [#69](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/69)
 
