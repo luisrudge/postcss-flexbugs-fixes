@@ -1,6 +1,6 @@
 {
     "name": "postcss-flexbugs-fixes",
-    "version": "4.2.1",
+    "version": "5.0.0",
     "description": "PostCSS plugin This project tries to fix all of flexbug's issues",
     "keywords": [
         "postcss",
@@ -22,7 +22,7 @@
         "index.js"
     ],
     "devDependencies": {
-        "postcss": "^8.1.0",
+        "postcss": "^8.1.4",
         "chai": "^4.2.0",
         "gulp": "^4.0.2",
         "gulp-eslint": "^6.0.0",
