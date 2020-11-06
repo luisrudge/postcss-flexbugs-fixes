@@ -21,8 +21,10 @@
         "bugs",
         "index.js"
     ],
+    "dependencies": {
+        "postcss": "^8.1.4"
+    },
     "devDependencies": {
-        "postcss": "^8.1.4",
         "chai": "^4.2.0",
         "gulp": "^4.0.2",
         "gulp-eslint": "^6.0.0",
