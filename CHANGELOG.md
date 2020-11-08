@@ -1,3 +1,6 @@
+## 5.0.1
+* Adding postcss as dependency [#74](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/74)
+
 ## 5.0.0
 * upgrade to postcss 8 [#71](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/71)
 
