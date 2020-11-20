@@ -1,6 +1,6 @@
 {
     "name": "postcss-flexbugs-fixes",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "description": "PostCSS plugin This project tries to fix all of flexbug's issues",
     "keywords": [
         "postcss",
@@ -21,7 +21,7 @@
         "bugs",
         "index.js"
     ],
-    "dependencies": {
+    "peerDependencies": {
         "postcss": "^8.1.4"
     },
     "devDependencies": {
