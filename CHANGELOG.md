@@ -1,4 +1,4 @@
-## 5.0.1
+## 5.0.2
 * Moving postcss to peer dependencies [#74](https://github.com/luisrudge/postcss-flexbugs-fixes/pull/74)
 
 ## 5.0.1
