@@ -22,7 +22,7 @@
         "index.js"
     ],
     "peerDependencies": {
-        "postcss": "^8.1.4"
+        "postcss": "^8.2.15"
     },
     "devDependencies": {
         "chai": "^4.2.0",
