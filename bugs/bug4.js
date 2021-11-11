@@ -36,7 +36,7 @@ module.exports = function(decl) {
     }
 
     if (values[2]) {
-      flexBasis = values[2];
+      flexBasis = values.slice(2).join(' ');
     }
 
     decl.value = flexGrow + ' ' + flexShrink + ' ' + properBasis(flexBasis);

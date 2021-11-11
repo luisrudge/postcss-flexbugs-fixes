@@ -7,6 +7,14 @@ describe('bug 6', function() {
     test(input, output, {}, done);
   });
   describe('does nothing', function() {
+    it('when flexBasis has operator wrapped by space if syntax is less', function(done) {
+      var less ='@vm:10px; .test{flex: 0 1 21 * @vm }'
+      test(less, less, {}, done, require('postcss-less'));
+    });
+    it('when flexBasis has operator wrapped by space if syntax is scss', function(done) {
+      var scss ='$vm:10px; .test{flex: 0 1 21 / $vm }'
+      test(scss, scss, {}, done, require('postcss-scss'));
+    });
     it('when flex is set to none', function(done) {
       var css = 'div{flex: none;}';
       test(css, css, {}, done);
